@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-03-23T11:57:19.212Z</updated>
+  <updated>2020-03-23T12:35:55.131Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>圣火昭昭</title>
+    <link href="http://yoursite.com/2020/03/23/%E5%9C%A3%E7%81%AB%E6%98%AD%E6%98%AD/"/>
+    <id>http://yoursite.com/2020/03/23/%E5%9C%A3%E7%81%AB%E6%98%AD%E6%98%AD/</id>
+    <published>2020-03-23T12:35:27.851Z</published>
+    <updated>2020-03-23T12:35:55.131Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;BJDCTF-2nd-圣火昭昭&quot;&gt;&lt;a href=&quot;#BJDCTF-2nd-圣火昭昭&quot; class=&quot;headerlink&quot; title=&quot;[BJDCTF 2nd]圣火昭昭&quot;&gt;&lt;/a&gt;[BJDCTF 2nd]圣火昭昭&lt;/h1&gt;&lt;h2 id=&quot;题目&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>隐写工具outguess安装使用教程</title>
