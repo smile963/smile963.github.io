@@ -270,6 +270,141 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/27/BJDCTF%202nd%20-Crypto/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="张文超">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="smile">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/03/27/BJDCTF%202nd%20-Crypto/" itemprop="url">BJDCTF 2nd -Crypto</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-03-27T20:30:40+08:00">
+                2020-03-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>@[TOC](BJDCTF 2nd -Crypto)</p>
+<h1 id="cat-flag"><a href="#cat-flag" class="headerlink" title="cat_flag"></a>cat_flag</h1><h2 id=""><a href="#" class="headerlink" title=""></a><img src="https://img-blog.csdnimg.cn/20200327181850820.gif#pic_center" alt="在这里插入图片描述"></h2><h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>我把没有鸡腿的作为0，有鸡腿的作为1，得到：01000010010010100100010001111011010011010010000101100001001100000111111001111101<br>然后将二进制转换为ASCII就是flag了。</p>
+<h1 id="灵能精通-y1ng"><a href="#灵能精通-y1ng" class="headerlink" title="灵能精通-y1ng"></a>灵能精通-y1ng</h1><h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>身经百战的Y1ng已经达到崇高的武术境界，以自律克己来取代狂热者的战斗狂怒与传统的战斗形式。Y1ng所受的训练也进一步将他们的灵能强化到足以瓦解周遭的物质世界。借由集中这股力量，Y1ng能释放灵能能量风暴来摧毁敌人的心智、肉体与器械。然后给出一个文件，将后缀改为jpg。<img src="https://img-blog.csdnimg.cn/20200327182641486.jpg" alt="在这里插入图片描述"></p>
+<h2 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h2><p>在网上找相关的加密，发现是<strong>圣堂武士密码</strong>，然后解密就可以了。<br><img src="https://img-blog.csdnimg.cn/20200327182827564.bmp" alt="在这里插入图片描述"></p>
+<h1 id="燕言燕语-y1ng"><a href="#燕言燕语-y1ng" class="headerlink" title="燕言燕语-y1ng"></a>燕言燕语-y1ng</h1><h2 id="题目-1"><a href="#题目-1" class="headerlink" title="题目"></a>题目</h2><p>小燕子，穿花衣，年年春天来这里，我问燕子你为啥来，燕子说:79616E7A69205A4A517B78696C7A765F6971737375686F635F73757A6A677D20</p>
+<h2 id="思路-2"><a href="#思路-2" class="headerlink" title="思路"></a>思路</h2><p>直接进行十进制转ASCII，得到</p>
+<blockquote>
+<p>yanzi ZJQ{xilzv_iqssuhoc_suzjg} </p>
+</blockquote>
+<p>然后利用维吉尼亚密码进行解密即可。<br><a href="https://www.cnblogs.com/inverseEntropy/p/10151176.html" target="_blank" rel="noopener">维吉尼亚密码加密解密原理及其实现</a></p>
+<h1 id="Y1nglish-y1ng"><a href="#Y1nglish-y1ng" class="headerlink" title="Y1nglish-y1ng"></a>Y1nglish-y1ng</h1><h2 id="题目-2"><a href="#题目-2" class="headerlink" title="题目"></a>题目</h2><p>Y1ng根据English居然独自发明了一门语言，就叫Y1nglish</p>
+<p>明文都是可读的英文单词，flag如果提交失败，自己读一下，把错误的单词修正，再提交(某个地方的u和i不需要调换顺序，错误点不在那里)<br>里面是一个txt文档</p>
+<blockquote>
+<p>Nkbaslk ds sef aslckdqdqst. Sef aslckdqdqst qo lzqtbw usf ufkoplkt zth oscpslsfko. Dpkfk zfk uqjk dwcko su dscqao qt dpqo aslckdqdqst, kzap su npqap qo jkfw mzoqa. Qu wse zfk qtdkfkodkh qt tkdnsfw okaefqdw, nkbaslk ds czfdqaqczdk. Bkd lk dkbb wse z odsfw.<br>Q nzo pzjqtv hqttkf zd z fkodzefztd npkt Pzffw Odkkbk azlk qt, pk qo z Izcztkok ufsl Izczt med tsn pk qo tsd bqjqtv qt Izczt, lzwmk Pzffw qot’d z Izcztkok tzlk med pk qo fkzbbw z Izcztkok. Pzffw nsfwkh qt z bznwkf’o suuqak wkzfo zvs, med pk qo tsn nsfwqtv zd z mztw. Pk vkdo z vssh ozbzfw, med pk zbnzwo msffsno lstkw ufsl pqo ufqktho zth tkjkf czwo qd mzaw. Pzffw ozn lk zth azlk zthozdzd dpk ozlk dzmbk. Pk pzo tkjkf msffsnkh lstkw ufsl lk. Npqbk pk nzo kzdqtv, Q zowkh pql ds bkth lk &amp;2. Ds lw oefcfqok, pk vzjk lk dpk lstkw qllkhqzdkbw. ‘Q pzjk tkjkf msfffsnkh ztw lstkw ufsl wse,’ Pzffw ozqh,’os tsn wse azt czw usf lw hqttkf!’ Tsn q nqbb vqjk wse npzd wse nztd.<br>MIH{cwdp0t_Mfed3_u0fa3_sF_geqcgeqc_ZQ_Af4aw}</p>
+</blockquote>
+<h2 id="思路-3"><a href="#思路-3" class="headerlink" title="思路"></a>思路</h2><p>看到别人的wp，知道这个加密方式为quipqiup，直接在线解密<a href="https://quipqiup.com/" target="_blank" rel="noopener">quipqiup</a><br>发现第一个读着比较通顺<br><img src="https://img-blog.csdnimg.cn/202003271926299.png" alt="在这里插入图片描述"><br>题目中也提示了错误的单词需要修正，就读一下内容，发现worying应该是working，bany应该是bank，就是把y改为k就行了。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/27/BJDCTF%202nd-Misc%20/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -681,7 +816,7 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
