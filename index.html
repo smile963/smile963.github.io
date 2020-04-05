@@ -270,6 +270,140 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/05/BUUCTF%20Crypto2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="张文超">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="smile">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/04/05/BUUCTF%20Crypto2/" itemprop="url">BUUCTF Crypto2</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-05T09:10:32+08:00">
+                2020-04-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="old-fashion"><a href="#old-fashion" class="headerlink" title="old-fashion"></a>old-fashion</h1><h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p><img src="https://img-blog.csdnimg.cn/20200405082845869.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1Nzg0ODU5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>应该是词频分析，就用<a href="https://quipqiup.com/" target="_blank" rel="noopener">quipqiup</a>试试，发现可以。<br><img src="https://img-blog.csdnimg.cn/20200405083751658.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1Nzg0ODU5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h1 id="权限获得第一步"><a href="#权限获得第一步" class="headerlink" title="权限获得第一步"></a>权限获得第一步</h1><h2 id="题目-1"><a href="#题目-1" class="headerlink" title="题目"></a>题目</h2><p>你猜这是什么东西，记得破解后把其中的密码给我。答案为非常规形式。<br>然后给了一个文本<br><img src="https://img-blog.csdnimg.cn/20200405084020640.png" alt="在这里插入图片描述"></p>
+<h2 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h2><p>直接对后32位进行MD5就可以得到flag。</p>
+<h1 id="世上无难事"><a href="#世上无难事" class="headerlink" title="世上无难事"></a>世上无难事</h1><h2 id="题目-2"><a href="#题目-2" class="headerlink" title="题目"></a>题目</h2><p>以下是某国现任总统外发的一段指令，经过一种奇异的加密方式，毫无规律，看来只能分析了。请将这段语句还原成通顺语句，并从中找到key作为答案提交，答案是32位，包含小写字母。<br><img src="https://img-blog.csdnimg.cn/20200405084258231.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1Nzg0ODU5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="思路-2"><a href="#思路-2" class="headerlink" title="思路"></a>思路</h2><p>直接词频分析<br><img src="https://img-blog.csdnimg.cn/20200405084401242.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1Nzg0ODU5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>别忘记把大写改为小写。</p>
+<h1 id="异性相吸"><a href="#异性相吸" class="headerlink" title="异性相吸"></a>异性相吸</h1><h2 id="题目-3"><a href="#题目-3" class="headerlink" title="题目"></a>题目</h2><p>最近出现了一个奇葩观点，说性别都不一样，怎么能谈恋爱？为了证明这个观点错误，请大家证明异性是相吸的。里面有两个文本<br><img src="https://img-blog.csdnimg.cn/20200405084541232.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200405084600781.png" alt="在这里插入图片描述"></p>
+<h2 id="思路-3"><a href="#思路-3" class="headerlink" title="思路"></a>思路</h2><p>看到密文什么也没有发现，就看了一下两个文件的二进制，发现两个的二进制个数一样多，应该是异或，就用代码跑了一下</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> open(<span class="string">'密文.txt'</span> )<span class="keyword">as</span> a:</span><br><span class="line">    a=a.read()</span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'key.txt'</span> )<span class="keyword">as</span> b:</span><br><span class="line">    b=b.read()</span><br><span class="line">d=<span class="string">''</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>,len(b)):</span><br><span class="line">    c=chr(ord(a[i])^ord(b[i]))</span><br><span class="line">    d+=c</span><br><span class="line">print(d)</span><br></pre></td></tr></table></figure>
+<p>运行后就是flag。</p>
+<h1 id="萌萌哒的八戒"><a href="#萌萌哒的八戒" class="headerlink" title="萌萌哒的八戒"></a>萌萌哒的八戒</h1><h2 id="题目-4"><a href="#题目-4" class="headerlink" title="题目"></a>题目</h2><p>萌萌哒的八戒原来曾经是猪村的村长，从远古时期，猪村就有一种神秘的代码。请从附件中找出代码，看看萌萌哒的猪八戒到底想说啥<br><img src="https://img-blog.csdnimg.cn/20200405085114263.jpg" alt="在这里插入图片描述"></p>
+<h2 id="思路-4"><a href="#思路-4" class="headerlink" title="思路"></a>思路</h2><p>很明显是猪圈密码，猪圈密码(Pigpen Cipher或称九宫格密码、朱高密码、共济会密码或共济会员密码)，是一种以格子为基础的简单替代式密码。更多<a href="https://en.wikipedia.org/wiki/Pigpen_cipher" target="_blank" rel="noopener">参考</a><br><img src="https://img-blog.csdnimg.cn/20200405090358206.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1Nzg0ODU5,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>直接解密即可。</p>
+<h2 id="变种"><a href="#变种" class="headerlink" title="变种"></a>变种</h2><p>圣堂武士密码(Templar Cipher)是共济会的“猪圈密码”的一个变种，一直被共济会圣殿骑士用。</p>
+<p>明文字母和对应密文：<br><img src="https://img-blog.csdnimg.cn/20200405090255367.PNG#pic_center" alt="在这里插入图片描述"></p>
+<h2 id="其他变种"><a href="#其他变种" class="headerlink" title="其他变种"></a>其他变种</h2><p>明文字母和对应密文：<br><img src="https://img-blog.csdnimg.cn/20200405090549442.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1Nzg0ODU5,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>明文字母和对应密文：<br><img src="https://img-blog.csdnimg.cn/20200405090653587.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1Nzg0ODU5,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>明文字母和对应密文：<br><img src="https://img-blog.csdnimg.cn/20200405090855448.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1Nzg0ODU5,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/04/BUUCTF%20Crypto/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -950,7 +1084,7 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
