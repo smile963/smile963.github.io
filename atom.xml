@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-04-05T01:10:58.329Z</updated>
+  <updated>2020-04-12T09:28:27.816Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Polkadot的跨链消息传递方案（XCMP）</title>
+    <link href="http://yoursite.com/2020/04/12/Polkadot%E7%9A%84%E8%B7%A8%E9%93%BE%E6%B6%88%E6%81%AF%E4%BC%A0%E9%80%92%E6%96%B9%E6%A1%88%EF%BC%88XCMP%EF%BC%89/"/>
+    <id>http://yoursite.com/2020/04/12/Polkadot%E7%9A%84%E8%B7%A8%E9%93%BE%E6%B6%88%E6%81%AF%E4%BC%A0%E9%80%92%E6%96%B9%E6%A1%88%EF%BC%88XCMP%EF%BC%89/</id>
+    <published>2020-04-12T09:28:00.841Z</published>
+    <updated>2020-04-12T09:28:27.816Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Polkadot的跨链消息传递方案（XCMP）&quot;&gt;&lt;a href=&quot;#Polkadot的跨链消息传递方案（XCMP）&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>BUUCTF Crypto2</title>

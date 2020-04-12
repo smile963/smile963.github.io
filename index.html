@@ -270,6 +270,159 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/12/Polkadot%E7%9A%84%E8%B7%A8%E9%93%BE%E6%B6%88%E6%81%AF%E4%BC%A0%E9%80%92%E6%96%B9%E6%A1%88%EF%BC%88XCMP%EF%BC%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="张文超">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="smile">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/04/12/Polkadot%E7%9A%84%E8%B7%A8%E9%93%BE%E6%B6%88%E6%81%AF%E4%BC%A0%E9%80%92%E6%96%B9%E6%A1%88%EF%BC%88XCMP%EF%BC%89/" itemprop="url">Polkadot的跨链消息传递方案（XCMP）</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-12T17:28:00+08:00">
+                2020-04-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Polkadot的跨链消息传递方案（XCMP）"><a href="#Polkadot的跨链消息传递方案（XCMP）" class="headerlink" title="Polkadot的跨链消息传递方案（XCMP）"></a>Polkadot的跨链消息传递方案（XCMP）</h1><p>跨链消息传递（XCMP）是Web3基金会项目Polkadot的关键组件，跨链消息传递（XCMP）方案是Polkadot协议的一个子集。它定义了在除了共享中继链的安全之外没有其他的信任假设的情况下，消息如何得以在平行链之间传递。</p>
+<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>Polkadot“1.0版”的一个关键性，是让原本隔离的平行链以安全和去信任的方式在彼此之间发送消息。出于此目的，我们定义message的方式与定义transaction的方式基本相同，两者都是指来字接受链以外的数据，而且都暗示并要求链按照其内部逻辑对数据做出反应。考虑到实际系统的延迟水平，链不能拒绝或混淆数据的含义。transaction 和 message 之间的关键区别在于，transaction 包含一个签名，以证明数据的出处（从而证明指令的权威性）。而对于 message，出处仅通过 Polkadot 的抗拜占庭加密经济验证基础设施来证明，在很大程度上跟以太坊合约间消息传递的方式是一样的。</p>
+<h2 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h2><p>在详细讨论XCMP的每个组件之前，先举一个例子，说明如何平行链A上的出站数据连接到平行链B的入站队列，从而通过平行链B的收集人（collator）进入下一个候选区块。<img src="https://img-blog.csdnimg.cn/20200412164750556.bmp?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1Nzg0ODU5,size_16,color_FFFFFF,t_70" alt="图1：显示了两个平行链 A 和 B 对应的收集人和全节点。有两个节点同时是平行链A网络和平行链 B 网络的全节点"><br>在中继链300区块，智能合约平行链发起针对“32”的端点（平行链B的ID）的消息，该消息首先包含在智能合约平行链的出站队列中，智能合约平行链的所有节点将开始在网络中对消息进行八卦（参见下面的“传递”一节）。如果智能合约链中的某些节点也是 B 链的完整节点，并且这些节点通过转发消息来充当两个八卦网络之间的粘合剂。如果不存在需要遍历的网络共享节点，则调用回退（请参阅下面的回退部分）机制。一旦消息到达 B平行链的收集人，它们就会接收此消息（以及它接收到的任何其他消息）并将其输入入站或入口队列，以便在其下一个候选块中进行处理。</p>
+<p>B平行链上的收集人将产生中继链区块 301 的候选块。此候选块将要求证明它从 A 的块上执行的消息是正确的消息。中继链块 300 包含 A 中区块的平行链区块头，也就是包括可用于认证消息的消息根散列的少量数据。</p>
+<p>此候选块将包括中继链轻客户端证明，证明此消息根位于中继链中，并将此证明与发送链发送的消息一起组合。</p>
+<p>B 平行链的平行链验证人将能够使用这些证明，来验证来自 B平行链的提议候选块的完整性。随后，智能合约链的原始消息被包含在了 B 平行链中，无需额外的节点提供安全性，并依赖于来自 Polkadot 的共享安全。</p>
+<h2 id="排队和排序消息"><a href="#排队和排序消息" class="headerlink" title="排队和排序消息"></a>排队和排序消息</h2><p>Polkadot 中的每个平行链的区块都可能生成一个空的消息列表发送到其他块。这些列表被称为出口队列（egress queues）。一旦消息被发送，它就进入平行链的入口队列。平行链必须按顺序处理入口列表。</p>
+<p>一个收集人或验证人试图为某个平行链的出口队列收集消息，它调用该平行链的入口，并在传播池中搜索相关消息，等待尚未被八卦的消息。</p>
+<h2 id="传递消息"><a href="#传递消息" class="headerlink" title="传递消息"></a>传递消息</h2><p>假设每个平行链都有一个全节点的连接网络。我们假设每个完整节点都知道系统中其他完整节点的子集，我们称之为相邻节点。请注意，我们对这些网络的拓扑结构和直径没有任何假设。</p>
+<p>发送消息的最简单方法是使用八卦协议（gossip protocol）。回想一下，同龄人之间经常就他们对当前假期的看法进行交流。为了实现更高效的传递，未发送的消息只会被传递到具有相同视图的相邻节点。</p>
+<p>如果这两个网络之间有共同的节点，消息将从一个平行链网络传播到另一个平行链网络。</p>
+<p><img src="https://img-blog.csdnimg.cn/20200412170354337.bmp?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1Nzg0ODU5,size_16,color_FFFFFF,t_70" alt="图2：显示了由八卦完成的消息传递过程。我们假设这条消息是由粉色collator发出的，它产生了最新的平行链区块。"></p>
+<h2 id="回滚机制"><a href="#回滚机制" class="headerlink" title="回滚机制"></a>回滚机制</h2><p>但是，如果接收方的平行链验证者意识到消息没有在接收平行链中被八卦，那么它们会从发送平行链的平行链验证者请求消息。一旦收到这些信息，他们就会在接收平行链网络中对这些信息进行八卦。<img src="https://img-blog.csdnimg.cn/20200412170723738.bmp?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1Nzg0ODU5,size_16,color_FFFFFF,t_70" alt="图3：显示当发送和接收平行链不共享任何全节点时的回滚传递。"><br>回滚传递机制如图 3 所示，我们假设平行链 A 希望向平行链 C 发送消息，而平行链 C 没有跟 A 共用的全节点。一旦平行链 C 的平行链验证人注意到消息尚未到达，它们就会向发送平行链验证人发出请求，后者负责保存来自其平行链的出口消息。一旦对请求的响应到达，平行链 C 的验证人就会在平行链 C 中八卦消息。</p>
+<h2 id="获得一致的历史记录"><a href="#获得一致的历史记录" class="headerlink" title="获得一致的历史记录"></a>获得一致的历史记录</h2><p>我们希望从 XCMP 获得的一个关键特性是规范平行链区块，即那些我们最终认可它已经发生的平行链区块。这意味着，在当前的平行链区块中，只对那些从平行链区块发送的消息起作用，这些平行链区块本身既规范又早于当前平行链区块。</p>
+<p>中继链定义了所有平行链的历史记录。例如，来自平行链B的区块头在中继链区块 301 中，可以说其作用于区块 300 之前的所有消息。如果作用于区块 300 之前的所有消息，那就作用于平行链 A 的区块发送的消息，并且仅当 A 平行链区块头出现在中继链 300 区块或更早的时候才会起作用。</p>
+<p>这意味着中继链需要在验证消息方面发挥作用。然而，由于我们不能在这些平行链区块头中放置大量数据，中继链本身不应该具有消息的有效负载。相反，我们通过使用嵌套的 Merkle 树来有效地保持一致的历史。对应于已发送消息的平行链区块头将包含一个消息根哈希，即 Merkle 树的根。反过来，这个Merkle 树的叶子是从这个平行链到另一个平行链的消息散列链的区块头。</p>
+<p>这意味着有一个包含每个消息哈希的哈希序列，让从一个平行链到另一个平行链的所有已发送消息得以验证。这允许收集人通过首先显示消息根在中继链中，然后证明这些是来自消息根哈希的消息，从而构造一个由许多散列组成的证据，证明它们对消息起作用，并且只对它们应该起作用的消息起作用。</p>
+<p>有关此主题的详细信息，请参见：<br><a href="https://research.web3.foundation/en/latest/polkadot/XCMP.html" target="_blank" rel="noopener">https://research.web3.foundation/en/latest/polkadot/XCMP.html</a></p>
+<h2 id="输入和输出验证"><a href="#输入和输出验证" class="headerlink" title="输入和输出验证"></a>输入和输出验证</h2><p>回想一下，Polkadot 由一条中继链和多条（暂定高达 100条）平行链组成。</p>
+<p>平行链区块头包含传出消息的消息根。为了在基于特定中继链块的平行链上生成平行链块，收集人需要查看在该中继链块和包括该平行链的最后一个平行链区块头的中继链之间构建了哪些平行链头。对于这些消息，平行链需要作用于相应的消息数据。</p>
+<p><img src="https://img-blog.csdnimg.cn/20200412171440501.bmp?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1Nzg0ODU5,size_16,color_FFFFFF,t_70" alt="图 4：显示了在第 0、1、2 轮中为三个平行链 A、B、C 构建的平行链块，以及在这些平行链中每轮发送的消息。"><br>链状态转换验证函数（STVF）使用验证函数来验证输入消息是否被执行。验证函数是 WebAssembly 的一部分，它检查平行链的状态转换是否实际有效。它将平行链的新状态和一组输出消息与平行链的先前状态摘要、平行链块数据和一组从其他平行链或由中继链准确地路由过来的输入消息相关联。</p>
+<p>图 4 显示了一个示例，其中为第 0、1、2 轮显示了三个平行链 A、B 和 C 之间生成的平行链块和消息。假设平行链 B 在第 0 轮中不产生任何平行链块，平行链 C 在第 1 轮中不产生平行链块。在第 1 轮中产生的平行链块B1需要将消息 m1 作为输入消息，并通过在第 1 轮发送消息 m3 来回复平行链 A。在第 2 轮中生成的平行链块 C1 需要在其未处理的入口队列中获取消息 m2 和 m4。</p>
+<h2 id="消息的可用性"><a href="#消息的可用性" class="headerlink" title="消息的可用性"></a>消息的可用性</h2><p>一旦消息被包含在出口队列中，它们就由收集人和发送平行链的全节点保存。当发送平行链块的头包含在中继链中时，平行链验证人也将保留消息。接收平行链的收集人和全节点还需要知道平行链之间发送的消息的有效负载。所有需要知道消息存在的其他实体只能存储散列，这些散列可以用来验证消息。</p>
+<p>为了保证可用性，我们要求所有验证人持有可恢复任何平行链消息的纠删码片段（ erasure-coded pieces ）。这些纠删码片段由发送平行链的平行链验证者生成和分发。其中 1/3 的纠删码片段足以恢复所有消息。最终确认要求投票人（验证人）收到这些纠删码片段，否则他们将因投票而受到惩罚。因此，最终确认时必须有 2/3 的纠删码片段可用；由此我们可以保证最终消息也可用。</p>
+<h2 id="防止Dos攻击"><a href="#防止Dos攻击" class="headerlink" title="防止Dos攻击"></a>防止Dos攻击</h2><p>注意，XCMP 的目的不是规定消息的标准格式。但是，每个平行链通过它发送给另一个平行链消息的总大小有一个限制。此外，八卦协议使用边界传递来避免较大的信息。</p>
+<p>对于不经常将块放入中继链中的平行线程，未处理的消息队列可能会大幅增长。为了限制这一点，发送平行链将为此链维护一个具有大小限制的出口队列。只有当它知道旧消息已经收到时才能删除它们。接收链发布一个水印，说明它在这个平行链的区块中处理了多少区块。发送链可以使用此水印来精简其出口队列。</p>
+<p>此外，我们计划让接收平行链能够阻止另一个平行链发送消息（此功能尚未实现）。平行线程还可以禁用 XCMP 函数，以避免处理大量消息。</p>
+<h2 id="XCMP和SPREE"><a href="#XCMP和SPREE" class="headerlink" title="XCMP和SPREE"></a>XCMP和SPREE</h2><p>SPREE（Shared Protected Runtime Execution Enclaves ）是类似于runtime模块的逻辑片段，但它们位于中继链上，可以由平行链选择其功能。</p>
+<p>这些逻辑片段是通过治理机制或平行链上传到 Polkadot 的 WebAssembly 代码块。一旦这些逻辑片段上传到 Polkadot，所有其他平行链都可以决定选择加入该逻辑。SPREE 模块将独立于平行链保留自己的存储，但可以通过与平行链的接口调用。平行链将同步向 SPREE 模块发送消息。</p>
+<p>这些逻辑片段可以将 XCMP 消息寻址到 SPREE 模块，并保证在对该消息执行操作时，它将使用来自该 SPREE 模块的与任何其他平行链相同的代码。SPREE 模块对于整个 XCMP 体系结构非常重要，因为它们提供了在目标平行链上执行代码的特定解释的保证。虽然 XCMP 保证消息的传递，但它并不保证执行代码，即接收平行链将如何解释消息。对 SPREE 模块的代码更新将与平行链同步进行。除了安全性方面的好处之外，这意味着不需要跨多个平行链协调更新就可以更改消息格式。</p>
+<p>总之，虽然 XCMP 完成了去信任消息传递，但是 SPREE 是对消息的去信任解释也是 XCMP 有用性的关键部分。发送到 SPREE 模块的 XCMP 消息，使调度消息的开发人员和用户能够清楚地知道如何处理消息。</p>
+<h2 id="XCMP属性总结"><a href="#XCMP属性总结" class="headerlink" title="XCMP属性总结"></a>XCMP属性总结</h2><p>XCMP 方案可以实现以下属性：</p>
+<p>去信任性：由于同一组验证人在保证正确消息传递的同时确保一个平行链与另一个平行链的安全，XCMP 所需的信任不超过单个区块链所需的信任。</p>
+<p>一致性：我们提供了绝对的保证，即接收到的消息与发送的消息完全一致，即使有任何链重组。<br>有效性：Polkadot 保证消息不会丢失并保持可用。这是通过分发可用于重建消息的纠删码片段来实现的。<br>保持正确的序列：通过输入/输出验证，可以保证保持平行链块输出消息的正确顺序。<br>效率：这个协议避免了太多的带宽占用，并让消息尽快到达。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/05/BUUCTF%20Crypto2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1084,7 +1237,7 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
