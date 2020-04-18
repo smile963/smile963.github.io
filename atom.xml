@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-04-18T08:47:04.257Z</updated>
+  <updated>2020-04-18T10:30:38.570Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>BUUCTF Crypto3</title>
+    <link href="http://yoursite.com/2020/04/18/BUUCTF%20Crypto3/"/>
+    <id>http://yoursite.com/2020/04/18/BUUCTF%20Crypto3/</id>
+    <published>2020-04-18T10:30:25.884Z</published>
+    <updated>2020-04-18T10:30:38.570Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;传感器&quot;&gt;&lt;a href=&quot;#传感器&quot; class=&quot;headerlink&quot; title=&quot;传感器&quot;&gt;&lt;/a&gt;传感器&lt;/h1&gt;&lt;h2 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>BBUUCTF RSA</title>
