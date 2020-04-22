@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="CTF,Crypto," />
 
 
 
@@ -81,12 +81,12 @@
 
 
 
-<meta name="description" content="@[TOC](BUUCTF Crypto) Windows系统密码题目给了一个文件，名字为pass.hash, 思路很明显直接取ctf后面那32位的MD5就可以得到flag。 大帝的密码武器题目给了一个名叫zip的文件，更改后缀，看到压缩包里有两个文件 思路很明显是凯撒加密，利用脚本跑一下可以看到第13个单词有意义，利用相同的加密方式加密密文就可以得到flag。代码如下 1234567891011">
+<meta name="description" content="Windows系统密码题目给了一个文件，名字为pass.hash, 思路很明显直接取ctf后面那32位的MD5就可以得到flag。 大帝的密码武器题目给了一个名叫zip的文件，更改后缀，看到压缩包里有两个文件 思路很明显是凯撒加密，利用脚本跑一下可以看到第13个单词有意义，利用相同的加密方式加密密文就可以得到flag。代码如下 1234567891011from __future__ import">
 <meta property="og:type" content="article">
 <meta property="og:title" content="BUUCTF Crypto">
 <meta property="og:url" content="http://yoursite.com/2020/04/04/BUUCTF%20Crypto/index.html">
 <meta property="og:site_name" content="smile">
-<meta property="og:description" content="@[TOC](BUUCTF Crypto) Windows系统密码题目给了一个文件，名字为pass.hash, 思路很明显直接取ctf后面那32位的MD5就可以得到flag。 大帝的密码武器题目给了一个名叫zip的文件，更改后缀，看到压缩包里有两个文件 思路很明显是凯撒加密，利用脚本跑一下可以看到第13个单词有意义，利用相同的加密方式加密密文就可以得到flag。代码如下 1234567891011">
+<meta property="og:description" content="Windows系统密码题目给了一个文件，名字为pass.hash, 思路很明显直接取ctf后面那32位的MD5就可以得到flag。 大帝的密码武器题目给了一个名叫zip的文件，更改后缀，看到压缩包里有两个文件 思路很明显是凯撒加密，利用脚本跑一下可以看到第13个单词有意义，利用相同的加密方式加密密文就可以得到flag。代码如下 1234567891011from __future__ import">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20200404202209490.png">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20200404202655343.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1Nzg0ODU5,size_16,color_FFFFFF,t_70">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20200404202720952.png">
@@ -96,8 +96,10 @@
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20200404210219682.png">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20200404211721647.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1Nzg0ODU5,size_16,color_FFFFFF,t_70">
 <meta property="article:published_time" content="2020-04-04T13:18:47.418Z">
-<meta property="article:modified_time" content="2020-04-04T13:19:22.672Z">
+<meta property="article:modified_time" content="2020-04-22T06:43:34.849Z">
 <meta property="article:author" content="张文超">
+<meta property="article:tag" content="CTF">
+<meta property="article:tag" content="Crypto">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200404202209490.png">
 
@@ -312,6 +314,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CTF/" itemprop="url" rel="index">
+                    <span itemprop="name">CTF</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -339,8 +363,7 @@
       
 
       
-        <p>@[TOC](BUUCTF Crypto)</p>
-<h1 id="Windows系统密码"><a href="#Windows系统密码" class="headerlink" title="Windows系统密码"></a>Windows系统密码</h1><h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>给了一个文件，名字为pass.hash,<br><img src="https://img-blog.csdnimg.cn/20200404202209490.png" alt="在这里插入图片描述"></p>
+        <h1 id="Windows系统密码"><a href="#Windows系统密码" class="headerlink" title="Windows系统密码"></a>Windows系统密码</h1><h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>给了一个文件，名字为pass.hash,<br><img src="https://img-blog.csdnimg.cn/20200404202209490.png" alt="在这里插入图片描述"></p>
 <h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>很明显直接取ctf后面那32位的<a href="https://www.cmd5.com/" target="_blank" rel="noopener">MD5</a>就可以得到flag。</p>
 <h1 id="大帝的密码武器"><a href="#大帝的密码武器" class="headerlink" title="大帝的密码武器"></a>大帝的密码武器</h1><h2 id="题目-1"><a href="#题目-1" class="headerlink" title="题目"></a>题目</h2><p>给了一个名叫zip的文件，更改后缀，看到压缩包里有两个文件<br><img src="https://img-blog.csdnimg.cn/20200404202655343.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1Nzg0ODU5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200404202720952.png" alt="在这里插入图片描述"></p>
 <h2 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h2><p>很明显是凯撒加密，利用脚本跑一下<br><img src="https://img-blog.csdnimg.cn/20200404203011280.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1Nzg0ODU5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>可以看到第13个单词有意义，利用相同的加密方式加密密文就可以得到flag。代码如下</p>
@@ -369,6 +392,14 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/CTF/" rel="tag"># CTF</a>
+          
+            <a href="/tags/Crypto/" rel="tag"># Crypto</a>
+          
+        </div>
+      
 
       
       
@@ -388,8 +419,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/04/05/BUUCTF%20Crypto2/" rel="prev" title="BUUCTF Crypto2">
-                BUUCTF Crypto2 <i class="fa fa-chevron-right"></i>
+              <a href="/2020/04/05/BUUCTF%20Crypto2/" rel="prev" title="BUUCTF Crypto">
+                BUUCTF Crypto <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -489,7 +520,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
