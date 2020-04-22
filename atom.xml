@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-04-22T06:59:08.105Z</updated>
+  <updated>2020-04-22T07:04:17.454Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2020/04/18/BUUCTF%20Crypto3/"/>
     <id>http://yoursite.com/2020/04/18/BUUCTF%20Crypto3/</id>
     <published>2020-04-18T10:30:25.884Z</published>
-    <updated>2020-04-22T06:59:08.105Z</updated>
+    <updated>2020-04-22T07:04:17.454Z</updated>
     
     <summary type="html">
     
@@ -37,8 +37,6 @@
     
     
       <category term="CTF" scheme="http://yoursite.com/categories/CTF/"/>
-    
-      <category term="idea" scheme="http://yoursite.com/categories/idea/"/>
     
     
       <category term="CTF" scheme="http://yoursite.com/tags/CTF/"/>
@@ -83,17 +81,12 @@
     <link href="http://yoursite.com/2020/04/12/Polkadot%E7%9A%84%E8%B7%A8%E9%93%BE%E6%B6%88%E6%81%AF%E4%BC%A0%E9%80%92%E6%96%B9%E6%A1%88%EF%BC%88XCMP%EF%BC%89/"/>
     <id>http://yoursite.com/2020/04/12/Polkadot%E7%9A%84%E8%B7%A8%E9%93%BE%E6%B6%88%E6%81%AF%E4%BC%A0%E9%80%92%E6%96%B9%E6%A1%88%EF%BC%88XCMP%EF%BC%89/</id>
     <published>2020-04-12T09:28:00.841Z</published>
-    <updated>2020-04-22T06:52:41.163Z</updated>
+    <updated>2020-04-22T07:06:43.972Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h1 id=&quot;Polkadot的跨链消息传递方案（XCMP）&quot;&gt;&lt;a href=&quot;#Polkadot的跨链消息传递方案（XCMP）&quot; class=&quot;headerlink&quot;
-        
-      
+      &lt;h1 id=&quot;Polkadot的跨链消息传递方案（XCMP）&quot;&gt;&lt;a href=&quot;#Polkadot的跨链消息传递方案（XCMP）&quot; class=&quot;headerlink&quot; title=&quot;Polkadot的跨链消息传递方案（XCMP）&quot;&gt;&lt;/a&gt;Polkadot的跨链消息传递方案（XCMP）&lt;/h1&gt;&lt;p&gt;跨链消息传递（XCMP）是Web3基金会项目Polkadot的关键组件，跨链消息传递（XCMP）方案是Polkadot协议的一个子集。它定义了在除了共享中继链的安全之外没有其他的信任假设的情况下，消息如何得以在平行链之间传递。&lt;/p&gt;
+&lt;h2 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h2&gt;&lt;p&gt;Polkadot“1.0版”的一个关键性，是让原本隔离的平行链以安全和去信任的方式在彼此之间发送消息。出于此目的，我们定义message的方式与定义transaction的方式基本相同，两者都是指来字接受链以外的数据，而且都暗示并要求链按照其内部逻辑对数据做出反应。考虑到实际系统的延迟水平，链不能拒绝或混淆数据的含义。transaction 和 message 之间的关键区别在于，transaction 包含一个签名，以证明数据的出处（从而证明指令的权威性）。而对于 message，出处仅通过 Polkadot 的抗拜占庭加密经济验证基础设施来证明，在很大程度上跟以太坊合约间消息传递的方式是一样的。&lt;/p&gt;
     
     </summary>
     
