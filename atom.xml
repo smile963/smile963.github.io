@@ -81,7 +81,7 @@
     <link href="http://yoursite.com/2020/04/12/Polkadot%E7%9A%84%E8%B7%A8%E9%93%BE%E6%B6%88%E6%81%AF%E4%BC%A0%E9%80%92%E6%96%B9%E6%A1%88%EF%BC%88XCMP%EF%BC%89/"/>
     <id>http://yoursite.com/2020/04/12/Polkadot%E7%9A%84%E8%B7%A8%E9%93%BE%E6%B6%88%E6%81%AF%E4%BC%A0%E9%80%92%E6%96%B9%E6%A1%88%EF%BC%88XCMP%EF%BC%89/</id>
     <published>2020-04-12T09:28:00.841Z</published>
-    <updated>2020-04-12T09:28:27.816Z</updated>
+    <updated>2020-04-22T06:52:41.163Z</updated>
     
     <summary type="html">
     
@@ -96,6 +96,12 @@
     </summary>
     
     
+      <category term="区块链" scheme="http://yoursite.com/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
+    
+    
+      <category term="区块链" scheme="http://yoursite.com/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
+    
+      <category term="Polkadot" scheme="http://yoursite.com/tags/Polkadot/"/>
     
   </entry>
   
@@ -187,11 +193,11 @@
   </entry>
   
   <entry>
-    <title>BJDCTF 2nd-Misc </title>
+    <title>BJDCTF 2nd -Misc</title>
     <link href="http://yoursite.com/2020/03/27/BJDCTF%202nd-Misc%20/"/>
     <id>http://yoursite.com/2020/03/27/BJDCTF%202nd-Misc%20/</id>
     <published>2020-03-27T09:36:04.602Z</published>
-    <updated>2020-03-27T09:36:18.744Z</updated>
+    <updated>2020-04-22T06:54:55.416Z</updated>
     
     <summary type="html">
     
@@ -206,15 +212,21 @@
     </summary>
     
     
+      <category term="CTF" scheme="http://yoursite.com/categories/CTF/"/>
+    
+    
+      <category term="CTF" scheme="http://yoursite.com/tags/CTF/"/>
+    
+      <category term="Misc" scheme="http://yoursite.com/tags/Misc/"/>
     
   </entry>
   
   <entry>
-    <title>隐写工具outguess安装使用教程</title>
+    <title>隐写工具outguess安装使用介绍</title>
     <link href="http://yoursite.com/2020/03/23/%E9%9A%90%E5%86%99%E5%B7%A5%E5%85%B7outguess%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"/>
     <id>http://yoursite.com/2020/03/23/%E9%9A%90%E5%86%99%E5%B7%A5%E5%85%B7outguess%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</id>
     <published>2020-03-23T11:56:20.305Z</published>
-    <updated>2020-03-23T11:57:19.212Z</updated>
+    <updated>2020-04-22T06:56:17.019Z</updated>
     
     <summary type="html">
     
@@ -222,13 +234,19 @@
       
         
         
-          &lt;h1 id=&quot;隐写工具outguess安装使用介绍&quot;&gt;&lt;a href=&quot;#隐写工具outguess安装使用介绍&quot; class=&quot;headerlink&quot; title=&quot;隐写工具outguess安装使用介绍&quot;&gt;&lt;/a&gt;隐写工具outguess安装使用介绍&lt;/h1&gt;&lt;h2
+          &lt;h2 id=&quot;outguess下载安装&quot;&gt;&lt;a href=&quot;#outguess下载安装&quot; class=&quot;headerlink&quot; title=&quot;outguess下载安装&quot;&gt;&lt;/a&gt;outguess下载安装&lt;/h2&gt;&lt;p&gt;  kail 终端命令输入git clone &lt;a
         
       
     
     </summary>
     
     
+      <category term="工具" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="CTF" scheme="http://yoursite.com/tags/CTF/"/>
+    
+      <category term="outguess" scheme="http://yoursite.com/tags/outguess/"/>
     
   </entry>
   
