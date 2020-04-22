@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-04-22T05:22:39.633Z</updated>
+  <updated>2020-04-22T05:36:57.540Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,20 +21,14 @@
     <link href="http://yoursite.com/2020/04/22/%E6%B5%8B%E8%AF%95/"/>
     <id>http://yoursite.com/2020/04/22/%E6%B5%8B%E8%AF%95/</id>
     <published>2020-04-22T05:16:01.960Z</published>
-    <updated>2020-04-22T05:22:39.633Z</updated>
+    <updated>2020-04-22T05:36:57.540Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h2 id=&quot;测试&quot;&gt;&lt;a href=&quot;#测试&quot; class=&quot;headerlink&quot;
-        
-      
-    
     </summary>
     
+    
+      <category term="Hexo" scheme="http://yoursite.com/categories/Hexo/"/>
     
     
   </entry>
