@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-04-22T07:04:17.454Z</updated>
+  <updated>2020-04-26T04:31:12.780Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>BUUCTF Cipher</title>
+    <link href="http://yoursite.com/2020/04/26/BUUCTF%20Cipher/"/>
+    <id>http://yoursite.com/2020/04/26/BUUCTF%20Cipher/</id>
+    <published>2020-04-26T04:30:58.146Z</published>
+    <updated>2020-04-26T04:31:12.780Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Cipher&quot;&gt;&lt;a href=&quot;#Cipher&quot; class=&quot;headerlink&quot; title=&quot;Cipher&quot;&gt;&lt;/a&gt;Cipher&lt;/h1&gt;&lt;h2 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="CTF" scheme="http://yoursite.com/categories/CTF/"/>
+    
+    
+      <category term="CTF" scheme="http://yoursite.com/tags/CTF/"/>
+    
+      <category term="Playfair密码" scheme="http://yoursite.com/tags/Playfair%E5%AF%86%E7%A0%81/"/>
+    
+  </entry>
   
   <entry>
     <title>BUUCTF Crypto</title>

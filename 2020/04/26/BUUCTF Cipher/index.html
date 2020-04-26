@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="CTF,outguess," />
+  <meta name="keywords" content="CTF,Playfair密码," />
 
 
 
@@ -81,18 +81,21 @@
 
 
 
-<meta name="description" content="outguess下载安装  kail 终端命令输入git clone https:&#x2F;&#x2F;github.com&#x2F;crorvick&#x2F;outguess，安装包下载完成到文件夹。打开文件夹，右键空白处选终端打开，输入命令.&#x2F;configure &amp;&amp; make &amp;&amp; make install进行安装。 使用outguess输入outguess -help即可获得相关命令。加密：">
+<meta name="description" content="Cipher题目Cipher：还能提示什么呢？公平的玩吧（密钥自己找） Dncnoqqfliqrpgeklwmppu  思路看过去一头雾水，也没有找到什么加密方式，最后通过https:&#x2F;&#x2F;www.cnblogs.com&#x2F;Fools&#x2F;p&#x2F;12202266.html的wp发现这是Playfair密码，并且密钥是“公平的玩”-playfair，明文是Dncnoqqfliqrpgeklwmppu，可以通过">
 <meta property="og:type" content="article">
-<meta property="og:title" content="隐写工具outguess安装使用介绍">
-<meta property="og:url" content="http://yoursite.com/2020/03/23/%E9%9A%90%E5%86%99%E5%B7%A5%E5%85%B7outguess%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/index.html">
+<meta property="og:title" content="BUUCTF Cipher">
+<meta property="og:url" content="http://yoursite.com/2020/04/26/BUUCTF%20Cipher/index.html">
 <meta property="og:site_name" content="smile">
-<meta property="og:description" content="outguess下载安装  kail 终端命令输入git clone https:&#x2F;&#x2F;github.com&#x2F;crorvick&#x2F;outguess，安装包下载完成到文件夹。打开文件夹，右键空白处选终端打开，输入命令.&#x2F;configure &amp;&amp; make &amp;&amp; make install进行安装。 使用outguess输入outguess -help即可获得相关命令。加密：">
-<meta property="article:published_time" content="2020-03-23T11:56:20.305Z">
-<meta property="article:modified_time" content="2020-04-22T06:56:17.019Z">
+<meta property="og:description" content="Cipher题目Cipher：还能提示什么呢？公平的玩吧（密钥自己找） Dncnoqqfliqrpgeklwmppu  思路看过去一头雾水，也没有找到什么加密方式，最后通过https:&#x2F;&#x2F;www.cnblogs.com&#x2F;Fools&#x2F;p&#x2F;12202266.html的wp发现这是Playfair密码，并且密钥是“公平的玩”-playfair，明文是Dncnoqqfliqrpgeklwmppu，可以通过">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200426122007919.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1Nzg0ODU5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200426123013318.png">
+<meta property="article:published_time" content="2020-04-26T04:30:58.146Z">
+<meta property="article:modified_time" content="2020-04-26T04:31:12.780Z">
 <meta property="article:author" content="张文超">
 <meta property="article:tag" content="CTF">
-<meta property="article:tag" content="outguess">
+<meta property="article:tag" content="Playfair密码">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200426122007919.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1Nzg0ODU5,size_16,color_FFFFFF,t_70">
 
 
 
@@ -122,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/03/23/隐写工具outguess安装使用教程/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/04/26/BUUCTF Cipher/"/>
 
 
 
 
 
-  <title>隐写工具outguess安装使用介绍 | smile</title>
+  <title>BUUCTF Cipher | smile</title>
   
 
 
@@ -265,7 +268,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/23/%E9%9A%90%E5%86%99%E5%B7%A5%E5%85%B7outguess%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/26/BUUCTF%20Cipher/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="张文超">
@@ -282,7 +285,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">隐写工具outguess安装使用介绍</h1>
+          <h1 class="post-title" itemprop="name headline">BUUCTF Cipher</h1>
         
 
         <div class="post-meta">
@@ -294,8 +297,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-03-23T19:56:20+08:00">
-                2020-03-23
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-26T12:30:58+08:00">
+                2020-04-26
               </time>
             
 
@@ -317,8 +320,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index">
-                    <span itemprop="name">工具</span>
+                  <a href="/categories/CTF/" itemprop="url" rel="index">
+                    <span itemprop="name">CTF</span>
                   </a>
                 </span>
 
@@ -354,8 +357,13 @@
       
 
       
-        <h2 id="outguess下载安装"><a href="#outguess下载安装" class="headerlink" title="outguess下载安装"></a>outguess下载安装</h2><p>  kail 终端命令输入git clone <a href="https://github.com/crorvick/outguess" target="_blank" rel="noopener">https://github.com/crorvick/outguess</a>，安装包下载完成到文件夹。打开文件夹，右键空白处选终端打开，输入命令./configure &amp;&amp; make &amp;&amp; make install进行安装。</p>
-<h2 id="使用outguess"><a href="#使用outguess" class="headerlink" title="使用outguess"></a>使用outguess</h2><p>输入outguess -help即可获得相关命令。<br>加密：<br>outguess -k “my secret key” -d hidden.txt demo.jpg out.jpg<br>加密之后，demo.jpg会覆盖out.jpg，hidden.txt的内容是要隐藏的东西。<br>解密：<br>outguess -k “my secret key” -r out.jpg hidden.txt<br>解密之后，紧密内容放在hidden.txt中</p>
+        <h1 id="Cipher"><a href="#Cipher" class="headerlink" title="Cipher"></a>Cipher</h1><h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>Cipher：还能提示什么呢？公平的玩吧（密钥自己找） Dncnoqqfliqrpgeklwmppu </p>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>看过去一头雾水，也没有找到什么加密方式，最后通过<a href="https://www.cnblogs.com/Fools/p/12202266.html" target="_blank" rel="noopener">https://www.cnblogs.com/Fools/p/12202266.html</a>的wp发现这是Playfair密码，并且密钥是“公平的玩”-playfair，明文是Dncnoqqfliqrpgeklwmppu，可以通过<a href="http://rumkin.com/tools/cipher/playfair.php" target="_blank" rel="noopener">网址</a>进行在线解密，我是通过密码的原理进行解密，如下：<br><img src="https://img-blog.csdnimg.cn/20200426122007919.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1Nzg0ODU5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="Playfair密码原理以及该题解题步骤"><a href="#Playfair密码原理以及该题解题步骤" class="headerlink" title="Playfair密码原理以及该题解题步骤"></a>Playfair密码原理以及该题解题步骤</h2><p> Playfair密码（Playfair cipher 或 Playfair square）一种替换密码，1854年由查尔斯·惠斯通（Charles Wheatstone）的英国人发明。 </p>
+<h3 id="编制密码表"><a href="#编制密码表" class="headerlink" title="编制密码表"></a>编制密码表</h3><p>编一个5<em>5的密码表，共有5行5列字母。第一列（或第一行）是密钥,其余按照字母顺序，如果密钥过长可占用第二列或行。密钥是一个单词或词组，若有重复字母，可将后面重复的字母去掉。当然也要把使用频率最少的字母去掉（它依据一个5</em>5的正方形组成的密码表来编写，密码表里排列有25个字母。如果一种语言字母超过25个，可以去掉使用频率最少的一个。如，法语一般去掉w或k，德语则是把i和j合起来当成一个字母看待，英语中z使用最少，可以去掉它）。<br>密钥是playfair，去掉重复的后为playfir<br>密码表为<br>    <img src="https://img-blog.csdnimg.cn/20200426123013318.png" alt="在这里插入图片描述"></p>
+<h3 id="整理明文-密文"><a href="#整理明文-密文" class="headerlink" title="整理明文/密文"></a>整理明文/密文</h3><p>整理明文/密文，将明文/密文每两个字母组成一对。如果成对后有两个相同字母紧挨或最后一个字母是单个的，就插入一个字母X（或者Q）。<br>密文：Dncnoqqfliqrpgeklwmppu<br>Dn cn oq qf li qr pg ek lw mp pu </p>
+<h3 id="解密规则"><a href="#解密规则" class="headerlink" title="解密规则"></a>解密规则</h3><p>（1） 若c1 c2在同一行，对应明文p1 p2分别是紧靠c1 c2 左端的字母。其中最后一列被看做是第一列的左方。<br>  （2） 若c1 c2在同一列，对应明文p1 p2分别是紧靠c1 c2 上方的字母。其中最后一行被看做是第一行的上方。<br>  （3）若c1 c2不在同一行，不在同一列，则p1 p2是由c1 c2确定的矩形的其他两角的字母。<br>密文 ：Dn cn oq qf li qr pg ek lw mp pu<br>明文： it is no ta pr ob le mh ve ef un</p>
+<h3 id="加密规则"><a href="#加密规则" class="headerlink" title="加密规则"></a>加密规则</h3><p> （1）若p1 p2在同一行，对应密文c1 c2分别是紧靠p1 p2 右端的字母。其中第一列被看做是最后一列的右方。如，按照前表，fg对应gj，mr对应om<br>  （2） 若p1 p2在同一列，对应密文c1 c2分别是紧靠p1 p2 下方的字母。其中第一行被看做是最后一行的下方。<br>  （3）若p1 p2不在同一行，不在同一列，则c1 c2是由p1 p2确定的矩形的其他两角的字母（至于横向替换还是纵向替换要事先约好，或自行尝试）。如，按照前表，ir对应pa或ap。</p>
 
       
     </div>
@@ -375,7 +383,7 @@
           
             <a href="/tags/CTF/" rel="tag"># CTF</a>
           
-            <a href="/tags/outguess/" rel="tag"># outguess</a>
+            <a href="/tags/Playfair%E5%AF%86%E7%A0%81/" rel="tag"># Playfair密码</a>
           
         </div>
       
@@ -388,8 +396,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/03/23/%E8%80%81%E6%96%87%E7%9B%B2%E4%BA%86/" rel="next" title="BUUCTF 2nd-Ctypto  老文盲了">
-                <i class="fa fa-chevron-left"></i> BUUCTF 2nd-Ctypto  老文盲了
+              <a href="/2020/04/18/BUUCTF%20Crypto3/" rel="next" title="BUUCTF Crypto">
+                <i class="fa fa-chevron-left"></i> BUUCTF Crypto
               </a>
             
           </div>
@@ -397,10 +405,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/03/27/BJDCTF%202nd-Misc%20/" rel="prev" title="BJDCTF 2nd -Misc">
-                BJDCTF 2nd -Misc <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -539,7 +543,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#outguess下载安装"><span class="nav-number">1.</span> <span class="nav-text">outguess下载安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用outguess"><span class="nav-number">2.</span> <span class="nav-text">使用outguess</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Cipher"><span class="nav-number">1.</span> <span class="nav-text">Cipher</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#题目"><span class="nav-number">1.1.</span> <span class="nav-text">题目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#思路"><span class="nav-number">1.2.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Playfair密码原理以及该题解题步骤"><span class="nav-number">1.3.</span> <span class="nav-text">Playfair密码原理以及该题解题步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#编制密码表"><span class="nav-number">1.3.1.</span> <span class="nav-text">编制密码表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#整理明文-密文"><span class="nav-number">1.3.2.</span> <span class="nav-text">整理明文&#x2F;密文</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解密规则"><span class="nav-number">1.3.3.</span> <span class="nav-text">解密规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#加密规则"><span class="nav-number">1.3.4.</span> <span class="nav-text">加密规则</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>

@@ -260,6 +260,154 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/26/BUUCTF%20Cipher/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="张文超">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="smile">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/04/26/BUUCTF%20Cipher/" itemprop="url">BUUCTF Cipher</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-26T12:30:58+08:00">
+                2020-04-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CTF/" itemprop="url" rel="index">
+                    <span itemprop="name">CTF</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Cipher"><a href="#Cipher" class="headerlink" title="Cipher"></a>Cipher</h1><h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>Cipher：还能提示什么呢？公平的玩吧（密钥自己找） Dncnoqqfliqrpgeklwmppu </p>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>看过去一头雾水，也没有找到什么加密方式，最后通过<a href="https://www.cnblogs.com/Fools/p/12202266.html" target="_blank" rel="noopener">https://www.cnblogs.com/Fools/p/12202266.html</a>的wp发现这是Playfair密码，并且密钥是“公平的玩”-playfair，明文是Dncnoqqfliqrpgeklwmppu，可以通过<a href="http://rumkin.com/tools/cipher/playfair.php" target="_blank" rel="noopener">网址</a>进行在线解密，我是通过密码的原理进行解密，如下：<br><img src="https://img-blog.csdnimg.cn/20200426122007919.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1Nzg0ODU5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="Playfair密码原理以及该题解题步骤"><a href="#Playfair密码原理以及该题解题步骤" class="headerlink" title="Playfair密码原理以及该题解题步骤"></a>Playfair密码原理以及该题解题步骤</h2><p> Playfair密码（Playfair cipher 或 Playfair square）一种替换密码，1854年由查尔斯·惠斯通（Charles Wheatstone）的英国人发明。 </p>
+<h3 id="编制密码表"><a href="#编制密码表" class="headerlink" title="编制密码表"></a>编制密码表</h3><p>编一个5<em>5的密码表，共有5行5列字母。第一列（或第一行）是密钥,其余按照字母顺序，如果密钥过长可占用第二列或行。密钥是一个单词或词组，若有重复字母，可将后面重复的字母去掉。当然也要把使用频率最少的字母去掉（它依据一个5</em>5的正方形组成的密码表来编写，密码表里排列有25个字母。如果一种语言字母超过25个，可以去掉使用频率最少的一个。如，法语一般去掉w或k，德语则是把i和j合起来当成一个字母看待，英语中z使用最少，可以去掉它）。<br>密钥是playfair，去掉重复的后为playfir<br>密码表为<br>    <img src="https://img-blog.csdnimg.cn/20200426123013318.png" alt="在这里插入图片描述"></p>
+<h3 id="整理明文-密文"><a href="#整理明文-密文" class="headerlink" title="整理明文/密文"></a>整理明文/密文</h3><p>整理明文/密文，将明文/密文每两个字母组成一对。如果成对后有两个相同字母紧挨或最后一个字母是单个的，就插入一个字母X（或者Q）。<br>密文：Dncnoqqfliqrpgeklwmppu<br>Dn cn oq qf li qr pg ek lw mp pu </p>
+<h3 id="解密规则"><a href="#解密规则" class="headerlink" title="解密规则"></a>解密规则</h3><p>（1） 若c1 c2在同一行，对应明文p1 p2分别是紧靠c1 c2 左端的字母。其中最后一列被看做是第一列的左方。<br>  （2） 若c1 c2在同一列，对应明文p1 p2分别是紧靠c1 c2 上方的字母。其中最后一行被看做是第一行的上方。<br>  （3）若c1 c2不在同一行，不在同一列，则p1 p2是由c1 c2确定的矩形的其他两角的字母。<br>密文 ：Dn cn oq qf li qr pg ek lw mp pu<br>明文： it is no ta pr ob le mh ve ef un</p>
+<h3 id="加密规则"><a href="#加密规则" class="headerlink" title="加密规则"></a>加密规则</h3><p> （1）若p1 p2在同一行，对应密文c1 c2分别是紧靠p1 p2 右端的字母。其中第一列被看做是最后一列的右方。如，按照前表，fg对应gj，mr对应om<br>  （2） 若p1 p2在同一列，对应密文c1 c2分别是紧靠p1 p2 下方的字母。其中第一行被看做是最后一行的下方。<br>  （3）若p1 p2不在同一行，不在同一列，则c1 c2是由p1 p2确定的矩形的其他两角的字母（至于横向替换还是纵向替换要事先约好，或自行尝试）。如，按照前表，ir对应pa或ap。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/18/BUUCTF%20Crypto3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1659,7 +1807,7 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1681,7 +1829,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
