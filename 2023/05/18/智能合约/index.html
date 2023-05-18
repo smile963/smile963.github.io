@@ -20,28 +20,45 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta property="og:type" content="website">
+  <meta name="description" content="编译和部署智能合约 智能合约首先会被编译成可别虚拟机直接执行的字节码，然后字节码会被用户以Transaction的方式发送给以太坊进行部署。 参考：https:&#x2F;&#x2F;www.arcblock.io&#x2F;blog&#x2F;zh&#x2F;post&#x2F;2018&#x2F;12&#x2F;08&#x2F;evm-part-1 **selfdestruct**：selfdestruct命令可以用来删除智能合约，并将该合约剩余ETH转到指定地址。selfdest">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Smile">
-<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:url" content="http://example.com/2023/05/18/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6/index.html">
 <meta property="og:site_name" content="Smile">
+<meta property="og:description" content="编译和部署智能合约 智能合约首先会被编译成可别虚拟机直接执行的字节码，然后字节码会被用户以Transaction的方式发送给以太坊进行部署。 参考：https:&#x2F;&#x2F;www.arcblock.io&#x2F;blog&#x2F;zh&#x2F;post&#x2F;2018&#x2F;12&#x2F;08&#x2F;evm-part-1 **selfdestruct**：selfdestruct命令可以用来删除智能合约，并将该合约剩余ETH转到指定地址。selfdest">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="c:/Users/smile/AppData/Roaming/Typora/typora-user-images/image-20230515110919921.png">
+<meta property="og:image" content="c:/Users/smile/AppData/Roaming/Typora/typora-user-images/image-20230515101324886.png">
+<meta property="og:image" content="c:/Users/smile/AppData/Roaming/Typora/typora-user-images/image-20230515102803908.png">
+<meta property="og:image" content="c:/Users/smile/AppData/Roaming/Typora/typora-user-images/image-20230515102827749.png">
+<meta property="og:image" content="c:/Users/smile/AppData/Roaming/Typora/typora-user-images/image-20230515103044279.png">
+<meta property="og:image" content="c:/Users/smile/AppData/Roaming/Typora/typora-user-images/image-20230515103433654.png">
+<meta property="og:image" content="c:/Users/smile/AppData/Roaming/Typora/typora-user-images/image-20230515103501504.png">
+<meta property="og:image" content="c:/Users/smile/AppData/Roaming/Typora/typora-user-images/image-20230515103758791.png">
+<meta property="og:image" content="c:/Users/smile/AppData/Roaming/Typora/typora-user-images/image-20230515104031359.png">
+<meta property="og:image" content="c:/Users/smile/AppData/Roaming/Typora/typora-user-images/image-20230515104112575.png">
+<meta property="og:image" content="c:/Users/smile/AppData/Roaming/Typora/typora-user-images/image-20230515104429639.png">
+<meta property="og:image" content="c:/Users/smile/AppData/Roaming/Typora/typora-user-images/image-20230515105514820.png">
+<meta property="article:published_time" content="2023-05-18T04:01:51.471Z">
+<meta property="article:modified_time" content="2023-05-15T03:23:31.726Z">
 <meta property="article:author" content="smile">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:/Users/smile/AppData/Roaming/Typora/typora-user-images/image-20230515110919921.png">
 
-<link rel="canonical" href="http://example.com/">
+<link rel="canonical" href="http://example.com/2023/05/18/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>Smile</title>
+  <title> | Smile</title>
   
 
 
@@ -145,9 +162,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -163,10 +181,9 @@
       <meta itemprop="name" content="Smile">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
+        <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2023/05/18/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6/" class="post-title-link" itemprop="url">未命名</a>
-        </h2>
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -196,7 +213,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p><strong>编译和部署智能合约</strong></p>
+        <p><strong>编译和部署智能合约</strong></p>
 <p>智能合约首先会被编译成可别虚拟机直接执行的字节码，然后字节码会被用户以Transaction的方式发送给以太坊进行部署。</p>
 <p>参考：<a target="_blank" rel="noopener" href="https://www.arcblock.io/blog/zh/post/2018/12/08/evm-part-1">https://www.arcblock.io/blog/zh/post/2018/12/08/evm-part-1</a></p>
 <p>**<code>selfdestruct</code>**：<code>selfdestruct</code>命令可以用来删除智能合约，并将该合约剩余<code>ETH</code>转到指定地址。<code>selfdestruct</code>是为了应对合约出错的极端情况而设计的。</p>
@@ -246,79 +263,30 @@
 <p>call修改的是被调用合约的状态变量</p>
 <p>static call不能修改合约中的状态变量。</p>
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/18/Bayesian-Learning/">
+        
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/logo.jpg">
-      <meta itemprop="name" content="smile">
-      <meta itemprop="description" content="">
-    </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Smile">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/09/18/Bayesian-Learning/" class="post-title-link" itemprop="url">Bayesian Learning</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2022-09-18 10:40:28 / 修改时间：19:10:43" itemprop="dateCreated datePublished" datetime="2022-09-18T10:40:28+08:00">2022-09-18</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-      
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/09/18/Bayesian-Learning/" rel="prev" title="Bayesian Learning">
+      <i class="fa fa-chevron-left"></i> Bayesian Learning
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
-  
-
-
   
 
 
@@ -371,6 +339,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%AF%E5%8D%87%E7%BA%A7%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6"><span class="nav-number">1.</span> <span class="nav-text">可升级智能合约</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#defi%E5%8D%8F%E8%AE%AE"><span class="nav-number">2.</span> <span class="nav-text">defi协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#uniswapv2"><span class="nav-number">3.</span> <span class="nav-text">uniswapv2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#delegatecall-%E4%BB%A5%E5%8F%8Astatic-call%EF%BC%8C-call%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">4.</span> <span class="nav-text">delegatecall 以及static call， call的区别</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
